@@ -4,12 +4,13 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.user_id = current_user.id
     @book.save
-    redirect_to '/home'
+    redirect_to 'books_index_path'
   end
 
   def index
     @user = current_user
     @book = Book.new
+    @books = Book.all
   end
 
   def show
