@@ -24,23 +24,23 @@
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to 'Home', user_path(current_user.id), class: 'nav-link text-dark' %>
+              <%= link_to 'Home', user_path(current_user.id), class: 'nav-link text-light' %>
             </li>
              <li class="nav-item">
-              <%= link_to "Users", users_path, class: 'nav-list text-dark' %>
+              <%= link_to "Users", users_path, class: 'nav-lint text-light' %>
             </li>
              <li class="nav-item">
-              <%= link_to 'Books', books_path, class: 'nav-link text-dark' %>
+              <%= link_to 'Books', books_path, class: 'nav-link text-light' %>
             </li>
             <li class="nav-item">
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-light' %>
             </li>
             <% else %>
             <li class="nav-item">
-              <%= link_to "新規登録", new_user_registration_path, class: 'nav-link text-dark' %>
+              <%= link_to "新規登録", new_user_registration_path, class: 'nav-link text-light' %>
             </li>
             <li class="nav-item">
-              <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-dark' %>
+              <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-light' %>
             </li>
             <% end %>
             </ul>
@@ -53,7 +53,7 @@
     </main>
 
     <footer>
-      <div class="container-5">
+      <div class="container mt-5">
         <div class="row">
           <div class="mx-auto">
             <p>CopyRight Infratop.inc</p>
