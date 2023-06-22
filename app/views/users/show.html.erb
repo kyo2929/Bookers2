@@ -20,7 +20,7 @@
           </tr>
         </thead>
 
-        <% @book.each do |book| %>
+        <% @books.each do |book| %>
         <tbody>
           <tr>
             <td><%= image_tag book.user.get_profile_image(80, 80) %></td>
@@ -30,6 +30,7 @@
         </tbody>
         <% end %>
       </table>
+      
     </div>
   </div>
 </div>

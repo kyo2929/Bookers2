@@ -1,3 +1,7 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
 <div class="container">
   <div clasd="row">
     <div class="mx-auto col-11 col-sm-10 col-lg-8 col-xl-6">
@@ -5,7 +9,7 @@
       <p>In</p>
       <p>you can share and exchange your opinions,inpressions,and emotions</p>
       <p>about various books!</p>
-      
+
       <div class="btn-wrapper col-10 mx-auto">
         <div class="row">
           <%= link_to 'sign up',new_user_registration_path %><br>
@@ -14,7 +18,7 @@
           <%= link_to 'login', new_user_session_path %>
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>
