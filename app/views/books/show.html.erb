@@ -2,15 +2,6 @@
   <%= flash[:notice] %>
 </div>
 
-<% if @book.errors.any? %>
-  <%= @book.errors.count%>件のエラーが発生しました。
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
-
 <div class="container">
   <div class="row">
     <div class="col-md-3">
@@ -22,12 +13,12 @@
       <table class="table">
         <tbody>
           <tr>
-            <td><%= image_tag @user.get_profile_image(80, 80) %><br>
+            <td><%= image_tag @user.get_profile_image(80, 80)%><br>
             <%= link_to @user.name, user_path(@user.id) %></td>
             <td><%= link_to @book.title, book_path(@book.id) %></td>
             <td><%= @book.body %></td>
             <% if @user == current_user %>
-              <td><%= link_to "Ediit", edit_book_path(@book.id), class: 'btn btn-sm btn-success' %></td>
+              <td><%= link_to "Edit", edit_book_path(@book.id), class: 'btn btn-sm btn-success' %></td>
               <td><%= link_to "Destroy", book_path(@book), class: 'btn btn-sm btn-danger', method: :delete %></td>
             <% end %>
           </tr>
